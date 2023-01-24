@@ -1,15 +1,14 @@
 ﻿using System.Data.SqlClient;
+using Uitls;
 
-namespace DatabasesPractice.ADO.NET
+namespace AdoNetPractice
 {
     public class ItemsRepository
     {
-        string connectionString = "Server=localhost;Database=ItemsManagement;User Id=sa;Password=<YOUR_PASSWORD>;TrustServerCertificate=True";
-
         public int GetNumberOfItems()
         {
             int numberOfItems = 0;
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Constants.ConnectionString))
             {
                 //TO DO
                 // write the corresponding code to get the number of items

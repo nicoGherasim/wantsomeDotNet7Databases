@@ -1,4 +1,4 @@
-﻿namespace DatabasesPractice.ADO.NET
+﻿namespace AdoNetPractice
 {
     public class Order
     {

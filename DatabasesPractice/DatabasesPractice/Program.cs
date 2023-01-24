@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using DatabasesPractice.ADO.NET;
+using AdoNetPractice;
 
 ItemsRepository itemsRepository = new ItemsRepository();
 
