@@ -4,7 +4,7 @@ namespace DatabasesPractice.ADO.NET
 {
     public class ItemsRepository
     {
-        string connectionString = "Server=localhost;Database=ItemsManagement;User Id=sa;Password=<YOUR_PASSWORD>;";
+        string connectionString = "Server=localhost;Database=ItemsManagement;User Id=sa;Password=<YOUR_PASSWORD>;TrustServerCertificate=True";
 
         public int GetNumberOfItems()
         {
