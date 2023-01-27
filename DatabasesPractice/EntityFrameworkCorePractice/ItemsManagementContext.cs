@@ -11,7 +11,7 @@ namespace EntityFrameworkCorePractice
             optionsBuilder.UseSqlServer(Constants.ConnectionString);
         }
 
-        // read this method and try to undestand why it is necessary
+        // read this method and try to undestand why it is necessary - to model the one to many relationship
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Item>()

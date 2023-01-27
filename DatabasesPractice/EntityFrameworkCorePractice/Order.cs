@@ -4,7 +4,7 @@ namespace EntityFrameworkCorePractice
 {
     public class Order
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
 
         public int NumberOfPieces { get; set; }

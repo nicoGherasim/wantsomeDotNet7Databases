@@ -1,16 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace EntityFrameworkCorePractice
+﻿namespace EntityFrameworkCorePractice
 {
-    [Table("Items")]
+    //[Table("Items")] // attributes to match the database table name
     public class Item
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
 
-        [Column("Name")]
-        [MaxLength(20)]
+        //[Column("Name")]
+        //[MaxLength(20)]
         public string Name { get; set; }
 
         //[Required]

@@ -8,9 +8,12 @@ namespace EntityFrameworkCorePractice
         {
             using (var context = new ItemsManagementContext())
             {
-
-                //TO DO
                 // write the corresponding code to get all items
+                var items = context.Items.ToList();
+                foreach (var item in items)
+                {
+                    Console.WriteLine($"{item.Id}, {item.Name}, {item.Price}");
+                }
             }
         }
 
@@ -20,16 +23,31 @@ namespace EntityFrameworkCorePractice
             {
                 var items = context.Items.Include(i => i.Orders).ToList();
 
-                //TO DO
                 // write the corresponding code to display the items with their orders
+                foreach (var item in items)
+                {
+                    Console.WriteLine($"{item.Id}, {item.Name}, {item.Price}");
+                    Console.WriteLine("Orders: ");
+                    foreach (var order in item.Orders)
+                    {
+                        Console.WriteLine($"{order.Id}, {order.NumberOfPieces}");
+                    }
+                }
             }
         }
 
         public void ReadFirstXItems(int numberOfItemsToRead)
         {
-            //TO DO
             // write the corresponding code to get the first X items
             // Tip. .Take(number) method should help you
+            using (var context = new ItemsManagementContext())
+            {
+                var items = context.Items.Take(numberOfItemsToRead).ToList();
+                foreach (var item in items)
+                {
+                    Console.WriteLine($"{item.Id}, {item.Name}, {item.Price}");
+                }
+            }
         }
     }
 }
